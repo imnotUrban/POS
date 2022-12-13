@@ -7,7 +7,7 @@ class ControladorCategorias{
 
 	static public function ctrMostrarCategorias($item, $valor){
         $tabla = "categorias";
-        $respuesta = ModeloCategorias::mdlMostrarCategoria($tabla,$item,$valor);
+        $respuesta = ModeloCategorias::mdlMostrarCategorias($tabla,$item,$valor);
         return $respuesta;
     }
 
@@ -87,6 +87,7 @@ class ControladorCategorias{
 
 					Swal.fire({
 						  type: "success",
+						  icon: "success",
 						  title: "La categoría ha sido cambiada correctamente",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
@@ -109,6 +110,7 @@ class ControladorCategorias{
 
 						Swal.fire({
 						  type: "error",
+						  icon: "error",
 						  title: "¡La categoría no puede ir vacía o llevar caracteres especiales!",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
@@ -126,6 +128,36 @@ class ControladorCategorias{
 
 		}
 
+	}
+
+
+	static public function ctrBorrarCategoria(){
+		if(isset($_GET["idCategoria"])){
+
+			$tabla = "categorias";
+			$datos = $_GET["idCategoria"];
+			$respuesta = ModeloCategorias::mdlBorrarCategoria($tabla, $datos);
+
+			if($respuesta == "ok"){
+				echo'<script>
+
+					Swal.fire({
+						  type: "success",
+						  icon: "success",
+						  title: "La categoría ha sido eliminada correctamente",
+						  showConfirmButton: true,
+						  confirmButtonText: "Cerrar"
+						  }).then(function(result){
+									if (result.value) {
+
+									window.location = "categorias";
+
+									}
+								})
+
+					</script>';
+			}
+		}
 	}
 
 

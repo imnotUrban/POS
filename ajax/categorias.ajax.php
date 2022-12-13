@@ -17,7 +17,9 @@ class AjaxCategorias{
         echo json_encode($respuesta);
     }
 
-
+/*=============================================
+EDITAR CATEGORÍA
+=============================================*/	
 
     public $idCategoria;
     public function ajaxEditarCategoria(){
@@ -26,19 +28,11 @@ class AjaxCategorias{
         $respuesta = ControladorCategorias::ctrMostrarCategorias($item, $valor);
         echo json_encode($respuesta);
 
+
     }
 
 
 
-}
-
-
-
-//objeto para validar usuario
-if(isset($_POST["validarCategoria"])){
-    $editar = new AjaxCategorias();
-    $editar -> validarCategoria = $_POST["validarCategoria"];
-    $editar -> ajaxValidarCategoria();
 }
 
 
@@ -47,7 +41,15 @@ EDITAR CATEGORÍA
 =============================================*/	
 if(isset($_POST["idCategoria"])){
 
-	$categoria = new AjaxCategorias();
-	$categoria -> idCategoria = $_POST["idCategoria"];
-	$categoria -> ajaxEditarCategoria();
+    $categoria = new AjaxCategorias();
+    $categoria -> idCategoria = $_POST["idCategoria"];
+    $categoria -> ajaxEditarCategoria();
 }
+
+//objeto para validar usuario
+if(isset($_POST["validarCategoria"])){
+    $editar = new AjaxCategorias();
+    $editar -> validarCategoria = $_POST["validarCategoria"];
+    $editar -> ajaxValidarCategoria();
+}
+

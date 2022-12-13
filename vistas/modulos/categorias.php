@@ -99,7 +99,7 @@
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-th"> </i></span>
                 <input type="text" class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" placeholder="Ingresar Categoria" required>
-                <input type="hidden" name="idCategoria" id="idCategoria" required>
+
               </div>
             </div>
             
@@ -170,7 +170,7 @@ MODAL EDITAR CATEGORÍA
 
                 <input type="text" class="form-control input-lg" name="editarCategoria" id="editarCategoria" required>
 
-                 <input type="hidden"  name="idCategoria" id="idCategoria" required>
+                <input type="hidden"  name="idCategoria" id="idCategoria" required>
 
               </div>
 
@@ -206,3 +206,9 @@ MODAL EDITAR CATEGORÍA
   </div>
 
 </div>
+<?php
+
+  $eliminarCategoria = new ControladorCategorias();
+  $eliminarCategoria -> ctrBorrarCategoria();
+
+?> 
