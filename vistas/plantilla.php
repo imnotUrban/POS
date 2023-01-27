@@ -28,6 +28,9 @@ session_start();
   <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
 
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="vistas/plugins/iCheck/all.css">
+
  
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -51,6 +54,16 @@ session_start();
     
     <!-- SweetAlersV2 -->
     <script src="vistas\plugins\sweetalerts2\sweetalert2.all.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="vistas/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- InputMask -->
+    <script src="vistas/plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="vistas/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="vistas/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+
+    <!-- jquery number -->
+    <script src="vistas/plugins/jqueryNumber/jquerynumber.min.js"></script>
 
 
 </head>
@@ -75,6 +88,7 @@ session_start();
             $_GET["ruta"] == "clientes" ||
             $_GET["ruta"] == "ventas"||
             $_GET["ruta"] == "crear-ventas"||
+            $_GET["ruta"] == "editar-venta"||
             $_GET["ruta"] == "reportes" ||
             $_GET["ruta"] == "salir"){
                 include "modulos/".$_GET["ruta"].".php";
@@ -99,6 +113,8 @@ session_start();
 <script src="vistas/js/plantilla.js"></script>
 <script src="vistas/js/usuarios.js"></script>
 <script src="vistas/js/categorias.js"></script>
-
+<script src="vistas/js/productos.js"></script>
+<script src="vistas/js/clientes.js"></script>
+<script src="vistas/js/ventas.js"></script>
 </body>
 </html>
