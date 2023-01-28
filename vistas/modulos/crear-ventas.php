@@ -90,7 +90,12 @@
                         $valor = null;
                         $categorias = ControladorClientes::ctrMostrarClientes($item, $valor);
                         foreach($categorias as $key => $value){
-                          echo '<option value="' . $value["id"] . '">' . $value["nombre"] . '</option>';
+                          if($value["nombre"]=="GENERAL"){
+                            echo '<option  selected="selected"  value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                          }else{
+                            echo '<option value="' . $value["id"] . '">' . $value["nombre"] . '</option>';
+
+                          }
                         }
                         ?>
 

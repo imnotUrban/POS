@@ -90,7 +90,7 @@
        
                            <div class="btn-group">
                                
-                             <button class="btn btn-info"><i class="fa fa-print"></i></button>
+                             <button class="btn btn-info btnImprimirFactura" codigoVenta="'.$value["codigo"].'"  anularVenta="'.$value["anular"].'" ><i class="fa fa-print"></i></button>
                             <!-- Se dejó la funcionalidad de editar la venta, sin embargo, esta no estará en la app final para evitar cosas que no queremos -->
                              <!--  <button class="btn btn-warning btnEditarVenta" idVenta="'.$value["id"].'"><i class="fa fa-pencil"></i></button> -->
        
@@ -107,7 +107,7 @@
        
                            <div class="btn-group">
                                
-                             <button class="btn btn-info"><i class="fa fa-print"></i></button>
+                            <!-- <button class="btn btn-info"><i class="fa fa-print"></i></button>-->
                              <button class="btn btn-warning">Venta Anulada</button>
                           </div>
                   </td>

@@ -30,6 +30,8 @@ session_start();
 
     <!-- iCheck for checkboxes and radio inputs -->
     <link rel="stylesheet" href="vistas/plugins/iCheck/all.css">
+        <!-- Daterange picker -->
+    <link rel="stylesheet" hreh="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.css">
 
  
   <!-- Google Font -->
@@ -57,6 +59,8 @@ session_start();
     <!-- iCheck 1.0.1 -->
     <script src="vistas/plugins/iCheck/icheck.min.js"></script>
 
+
+
     <!-- InputMask -->
     <script src="vistas/plugins/input-mask/jquery.inputmask.js"></script>
     <script src="vistas/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
@@ -64,6 +68,11 @@ session_start();
 
     <!-- jquery number -->
     <script src="vistas/plugins/jqueryNumber/jquerynumber.min.js"></script>
+
+    <!-- Daterange picker -->
+
+    <script src="vistas/bower_components/moment/min/moment.min.js"></script>
+    <script src="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 
 
 </head>

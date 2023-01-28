@@ -73,8 +73,8 @@ class ControladorUsuarios{
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["nuevoPassword"])){
                 
                 // Validamos imagen 
-                $ruta = "";
-                if(isset($_FILES["nuevaFoto"]["tmp_name"])){
+                $ruta = "vistas/img/usuarios/default/anonymous.png";
+                if(isset($_FILES["nuevaFoto"]["tmp_name"]) && $_FILES["nuevaFoto"]["tmp_name"]!=""){
 
                     list($ancho,$alto) = getimagesize($_FILES["nuevaFoto"]["tmp_name"]);
                     $nuevoAncho = 500;

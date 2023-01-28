@@ -63,15 +63,19 @@
                         echo'
                         <td>'.$value['perfil'].'</td>';
 
-                        if($value["estado"] != 0){
+                        if($_SESSION["id"]!=$value["id"]){
 
-                          echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
-      
+                          if($value["estado"] != 0){
+                            echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
+        
+                          }else{
+        
+                            echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
+        
+                          } 
                         }else{
-      
-                          echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
-      
-                        } 
+                          echo '<td><button class="btn btn-warning btn-xs" " estadoUsuario="0">En uso</button></td>';
+                        }
 
                         echo '
                         <td>'.$value['ultimo_login'].'</td>
@@ -151,7 +155,7 @@
 
             <div class="form-group">
               <div class="panel">SUBIR FOTO</div>
-              <input type="file" class="nuevaFoto" name="nuevaFoto" required>
+              <input type="file" class="nuevaFoto" name="nuevaFoto" >
               <p class="help-block">Peso maximo de la foto 2MB.</p>
               <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
             </div>
