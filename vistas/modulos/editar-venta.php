@@ -2,7 +2,7 @@
 
     <section class="content-header">
       <h1>
-        Crear Venta
+        Editar Venta
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
@@ -178,7 +178,7 @@
                               <td style="width:50%">
                                 <div class="input-group">
                                   <span class="input-group-addon"><i class="ion ion-social-usd"></i></span>
-                                  <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="" value="<?php echo $venta["total"]; ?>" readonly required>
+                                  <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="<?php echo $venta["neto"]; ?>" value="<?php echo $venta["total"]; ?>" readonly required>
                                   <input type="hidden" name="totalVenta" value="<?php echo $venta["total"]; ?>" id="totalVenta">
                                 </div>
                               </td>

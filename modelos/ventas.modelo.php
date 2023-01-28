@@ -85,4 +85,21 @@ class ModeloVentas{
 
 	}
 
+
+	static public function mdlEliminarVenta($tabla, $valor){
+
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET anular = 1 WHERE id = :id");
+		$stmt -> bindParam(":id", $valor, PDO::PARAM_STR);
+
+		if($stmt -> execute()){
+
+			return "ok";
+		
+		}else{
+
+			return "error";	
+
+		}
+	}
+
 }

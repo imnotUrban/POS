@@ -37,7 +37,7 @@
                 <th>Cliente</th>
                 <th>Vendedor</th>
                 <th>Forma de pago</th>
-                <th>Neto</th>
+                <th>Neto</th> 
                 <th>Total</th>
                 <th>Fecha transacción</th>
                 <th>Acciones</th>
@@ -80,23 +80,39 @@
      
                        <td>$ '.number_format($value["total"]).'</td>
      
-                       <td>'.$value["fecha"].'</td>
-     
-                       <td>
-     
-                         <div class="btn-group">
-                             
-                           <button class="btn btn-info"><i class="fa fa-print"></i></button>
-     
-                           <button class="btn btn-warning btnEditarVenta" idVenta="'.$value["id"].'"><i class="fa fa-pencil"></i></button>
-     
-                           <button class="btn btn-danger btnEliminarVenta" idVenta="'.$value["id"].'"><i class="fa fa-times"></i></button>
-     
-                         </div>  
-     
-                       </td>
-     
-                     </tr>';
+                       <td>'.$value["fecha"].'</td>';
+                
+                if($value["anular"]!=1){
+
+                  echo '
+       
+                         <td>
+       
+                           <div class="btn-group">
+                               
+                             <button class="btn btn-info"><i class="fa fa-print"></i></button>
+                            <!-- Se dejó la funcionalidad de editar la venta, sin embargo, esta no estará en la app final para evitar cosas que no queremos -->
+                             <!--  <button class="btn btn-warning btnEditarVenta" idVenta="'.$value["id"].'"><i class="fa fa-pencil"></i></button> -->
+       
+                             <button class="btn btn-danger btnEliminarVenta" idVenta="'.$value["id"].'"><i class="fa fa-times"></i></button>
+       
+                           </div>  
+       
+                         </td>
+       
+                       </tr>';
+                }else{
+                  echo '
+                  <td>
+       
+                           <div class="btn-group">
+                               
+                             <button class="btn btn-info"><i class="fa fa-print"></i></button>
+                             <button class="btn btn-warning">Venta Anulada</button>
+                          </div>
+                  </td>
+                  ';
+                }
                  }
 
             ?>
@@ -106,6 +122,12 @@
 
           </table>
 
+          <?php
+            $eliminarVenta = new ControladorVentas();
+            $eliminarVenta->ctrEliminarVenta();
+
+          ?>
+
         </div>
 
       </div>
@@ -114,5 +136,8 @@
     </section>
 
 </div>
+
+
+
 
 

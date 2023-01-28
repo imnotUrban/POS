@@ -527,11 +527,87 @@ function listarMetodos(){
 }
 
 // Boton editar ventas 
-$(".btnEditarVenta").click(function(){
+
+$(".tablas tbody").on("click", "button.btnEditarVenta", function(){
+
 
 
   var idVenta = $(this).attr("idVenta");
 
   window.location = "index.php?ruta=editar-venta&idVenta="+idVenta;
+
+})
+
+
+
+
+function quitarAgregarProducto(){
+
+	//Capturamos todos los id de productos que fueron elegidos en la venta
+	var idProductos = $(".quitarProducto");
+
+	//Capturamos todos los botones de agregar que aparecen en la tabla
+	var botonesTabla = $(".tablaVentas tbody button.agregarProducto");
+
+	//Recorremos en un ciclo para obtener los diferentes idProductos que fueron agregados a la venta
+	for(var i = 0; i < idProductos.length; i++){
+
+		//Capturamos los Id de los productos agregados a la venta
+		var boton = $(idProductos[i]).attr("idProducto");
+		
+		//Hacemos un recorrido por la tabla que aparece para desactivar los botones de agregar
+		for(var j = 0; j < botonesTabla.length; j ++){
+
+			if($(botonesTabla[j]).attr("idProducto") == boton){
+
+				$(botonesTabla[j]).removeClass("btn-primary agregarProducto");
+				$(botonesTabla[j]).addClass("btn-default");
+
+			}
+		}
+
+	}
+	
+}
+
+/*=============================================
+CADA VEZ QUE CARGUE LA TABLA CUANDO NAVEGAMOS EN ELLA EJECUTAR LA FUNCIÓN:
+=============================================*/
+
+$('.tablaVentas').on( 'draw.dt', function(){
+
+	quitarAgregarProducto();
+
+})
+
+
+
+// Borrar Venta 
+
+
+$(".tablas tbody").on("click", "button.btnEliminarVenta", function(){
+
+
+  var idVenta = $(this).attr("idVenta");
+
+  Swal.fire({
+    title: '¿Está seguro de anular la venta?',
+    text: "¡Si no lo está puede cancelar la acción!",
+    type: 'warning',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    cancelButtonText: 'Cancelar',
+    confirmButtonText: 'Si, anular venta!'
+  }).then(function(result){
+    if (result.value) {
+      
+      window.location = "index.php?ruta=ventas&idVenta="+idVenta;
+    }
+
+})
+
+  
 
 })
