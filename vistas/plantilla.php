@@ -31,7 +31,8 @@ session_start();
     <!-- iCheck for checkboxes and radio inputs -->
     <link rel="stylesheet" href="vistas/plugins/iCheck/all.css">
         <!-- Daterange picker -->
-    <link rel="stylesheet" hreh="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.css">
 
  
   <!-- Google Font -->
@@ -69,8 +70,8 @@ session_start();
     <!-- jquery number -->
     <script src="vistas/plugins/jqueryNumber/jquerynumber.min.js"></script>
 
-    <!-- Daterange picker -->
 
+      <!-- daterangepicker http://www.daterangepicker.com/-->
     <script src="vistas/bower_components/moment/min/moment.min.js"></script>
     <script src="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 

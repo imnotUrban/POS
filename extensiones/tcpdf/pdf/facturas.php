@@ -87,7 +87,7 @@ $bloque1 = <<<EOF
             <td style="background-color:white; width:140px; text-align:center; color:red">
             
                 <br><br>
-                FACTURA N°<br>
+                BOLETA N°<br>
                 $valorVenta
             
             </td>
