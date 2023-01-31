@@ -114,8 +114,9 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
                 '<div class="input-group">'+
   
                   '<span class="input-group-addon"><i class="ion ion-social-usd"></i></span>'+
+                  
                      
-                  '<input type="text" class="form-control nuevoPrecioProducto" precioReal="'+precio+'" name="nuevoPrecioProducto" value="'+precio+'" readonly required>'+
+                  '<input type="text" class="form-control nuevoPrecioProducto" precioReal="'+precio+'" name="nuevoPrecioProducto" value="'+precio+'"  required>'+
      
                 '</div>'+
                  
@@ -244,7 +245,7 @@ $(".btnAgregarProducto").click(function(){
 
                 '<span class="input-group-addon"><i class="ion ion-social-usd"></i></span>'+
                   
-                '<input type="text" class="form-control nuevoPrecioProducto" precioReal=""  readonly required>'+
+                '<input type="text" class="form-control nuevoPrecioProducto" precioReal=""   required>'+
 
               '</div>'+
               
@@ -695,3 +696,10 @@ $(".daterangepicker.opensright .ranges li").on("click", function () {
     window.location = "index.php?ruta=reportes&fechaInicial=" + fechaInicial + "&fechaFinal=" + fechaFinal;
   }
 })
+
+
+
+
+
+
+

@@ -101,7 +101,9 @@
 
                           $item = "id";
                           $valor = $value["id"];
-                          $respuesta = ControladorProductos::ctrMostrarProductos($item, $valor);
+                          $orden = "id";
+    
+                          $respuesta = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
                           $stockAntiguo = $respuesta["stock"] + $value["cantidad"];
 

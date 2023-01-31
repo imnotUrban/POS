@@ -28,11 +28,17 @@ session_start();
   <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
 
+
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="vistas/bower_components/morris.js/morris.css">
     <!-- iCheck for checkboxes and radio inputs -->
     <link rel="stylesheet" href="vistas/plugins/iCheck/all.css">
         <!-- Daterange picker -->
 
     <link rel="stylesheet" href="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+
+
+
 
  
   <!-- Google Font -->
@@ -49,11 +55,11 @@ session_start();
     <script src="vistas/bower_components/fastclick/lib/fastclick.js"></script>
     <!-- AdminLTE App -->
     <script src="vistas/dist/js/adminlte.min.js"></script>
-    <script src="vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <!-- Datatables -->
-    <script src="vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
-    <script src="vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
+  <!-- DataTables -->
+  <script src="vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <script src="vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+  <script src="vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
     
     <!-- SweetAlersV2 -->
     <script src="vistas\plugins\sweetalerts2\sweetalert2.all.js"></script>
@@ -74,6 +80,12 @@ session_start();
       <!-- daterangepicker http://www.daterangepicker.com/-->
     <script src="vistas/bower_components/moment/min/moment.min.js"></script>
     <script src="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+      <!-- Morris.js charts http://morrisjs.github.io/morris.js/-->
+  <script src="vistas/bower_components/raphael/raphael.min.js"></script>
+  <script src="vistas/bower_components/morris.js/morris.min.js"></script>
+
+  <!-- ChartJS http://www.chartjs.org/-->
+  <script src="vistas/bower_components/chart.js/Chart.js"></script>
 
 
 </head>
@@ -126,5 +138,7 @@ session_start();
 <script src="vistas/js/productos.js"></script>
 <script src="vistas/js/clientes.js"></script>
 <script src="vistas/js/ventas.js"></script>
+<script src="vistas/js/reportes.js"></script>
+
 </body>
 </html>
